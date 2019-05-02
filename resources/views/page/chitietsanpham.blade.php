@@ -12,7 +12,7 @@
       <div class="row">
 
         <div class="col-md-8">
-          <img class="img-fluid" src="products/{{$sanpham->image}}" alt="">
+          <img class="img-fluid" src="source/images/products/{{$sanpham->image}}" alt="">
         </div>
 
         <div class="col-md-4">
@@ -37,7 +37,7 @@
         @foreach($sanphamcungloai as $sp_cungloai)
         <div class="col-md-3 col-sm-6 mb-4">
           <a href="#">
-            <img class="img-fluid" src="products/{{$sp_cungloai->image}}" alt="">
+            <img class="img-fluid" src="source/images/products/{{$sp_cungloai->image}}" alt="">
           </a>
         </div>
         @endforeach

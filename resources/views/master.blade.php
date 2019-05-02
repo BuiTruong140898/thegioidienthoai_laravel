@@ -19,7 +19,7 @@
     <link href="source/css/shop-homepage.css" rel="stylesheet">
 
   </head>
-
+  
   <body>
 
     <!-- Navigation -->
@@ -33,49 +33,32 @@
        
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
+            
+            @foreach($loai_sp as $loai_sp)
+               <li class="nav-item">
+
+               <a class="nav-link" href="{{route('sanphamtheoloai',$loai_sp->id)}}" >{{$loai_sp->name}}</a>
+               </li>
+            @endforeach
+            
           </ul>
         </div>
+    
       </div>
-    </nav>
+      {{-- /container --}}
+      </nav>
 
-    <!-- Page Content -->
+      <!-- Page Content -->
     <div class="container">
 
       <div class="row">
 
-        <div class="col-lg-3">
+      @yield('content')
 
-{{--           <h1 class="my-4">Thế giới điện thoại</h1>
- --}}          <div class="list-group">
-            @foreach($loai_sp as $loai_sp)
-            <a href="{{route('sanphamtheoloai',$loai_sp->id)}}" class="list-group-item">{{$loai_sp->name}}</a>
-            @endforeach
-          </div>
-
-        </div>
-        <!-- /.col-lg-3 -->
-
-      @yield('content');
-
-      </div>
-      <!-- /.row -->
 
     </div>
     <!-- /.container -->
+  
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
