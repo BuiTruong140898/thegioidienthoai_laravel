@@ -2,7 +2,7 @@
  @section('content')
 
 
- <div class="col-lg-9">
+         <div class="col-lg-9">
 
           <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -29,10 +29,17 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
+         </div>
+        <!-- /.col-lg-9 -->
 
+        <div class="col-lg-3">
+          <h1>news</h1>
+        </div>  
+        {{-- /.col-lg-3 --}}
+        <div class='container'>
           <div class="row">
             @foreach($product as $pro)
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-3 col-md-6 mb-3">
               <div class="card h-100">
                 <a href="{{route('chitiet_sp',$pro->id)}}"><img class="card-img-top" src="source/images/products/{{$pro->image}}" alt=""></a>
                 <div class="card-body">
@@ -50,7 +57,8 @@
             @endforeach
           </div>
           <!-- /.row -->
+        </div>
+        {{-- /.container --}}
 
-</div>
-        <!-- /.col-lg-9 -->
+
  @endsection('content')

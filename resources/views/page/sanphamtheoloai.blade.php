@@ -6,7 +6,7 @@
             @foreach($sanphamtheoloai as $pro)
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="{{route('chitiet_sp',$pro->id)}}"><img class="card-img-top" src="products/{{$pro->image}}" alt=""></a>
+                <a href="{{route('chitiet_sp',$pro->id)}}"><img class="card-img-top" src="source/images/products/{{$pro->image}}" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#">{{$pro->name}}</a>
@@ -23,6 +23,6 @@
           </div>
           <!-- /.row -->
 
-        </div>
+</div>
         <!-- /.col-lg-9 -->
  @endsection('content')
